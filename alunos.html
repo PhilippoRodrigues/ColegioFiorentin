@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width">
+  <meta name="author" content="Philippo Rodrigues" />
+  <meta name="keywords" content="Colégio, Fiorentin, High School" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" type="text/css">
+  <title>Alunos</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="Modernizr/modernizr-custom.js"></script>
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/estilos.css" />
+  <link
+          href="https://fonts.googleapis.com/css?family=Arapey&display=swap"
+          rel="stylesheet"
+  />
+</head>
+
+<body>
+<main>
+  <header>
+    <div class="imagem-cabecalho">
+      <img
+              src="imagensIndex/logoColegio.png"
+              alt="Brasão da escola nas cores azul e branco"
+              title="Logomarca escola"
+      />
+    </div>
+    <div>
+      <nav class="menu-outras-paginas">
+        <ul class="primary">
+          <li>
+            <a href="index.html" title="home">home</a>
+          </li>
+          <li>
+            <a href="sobre.html" title="sobre">sobre</a>
+          </li>
+          <li>
+            <a href="">alunos</a>
+            <ul class="sub">
+              <li><a href="alunos.html" title="alunos">tabela de alunos</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">disciplinas</a>
+            <ul class="sub">
+              <li><a href="#">tabela de disciplinas/professores</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="noticias.html" title="notícias">notícias</a>
+          <li>
+            <a href="contato.html" title="contato">contato</a>
+          </li>
+          <li class="login">
+            <a href="login.html">login</a>
+            <ul class="sub">
+              <li><a  class="menu-login" href="login.html" title="login">Login</a></li>
+              <li><a  class="menu-cadastro" href="login.html" title="cadastro">Cadastro</a></li>
+            </ul>
+          </li>
+          <li class="search">
+            <form>
+              <label>
+                <input type="text" placeholder="Search.." name="search">
+              </label>
+              <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+      <section id="form">
+        <form id="form-aluno">
+          <h2>Dados do aluno</h2>
+          <p>Página destinada ao cadastro, edição, remoção e exibição dos alunos matriculados no Colégio Fiorentin. </p>
+
+          <label for="aluno">Nome:</label>
+          <input type="text" id="aluno" name="nome" required />
+
+          <label for="idade">Idade:</label>
+          <input type="text" id="idade" name="idade" required />
+
+          <label for="serie">Série:</label>
+          <select id="serie" name="serie" required>
+            <option value="" data-default disabled selected>Selecione</option>
+            <option value="1º ano - ensino médio">1º ano - ensino médio</option>
+            <option value="2º ano - ensino médio">2º ano - ensino médio</option>
+            <option value="3º ano - ensino médio">3º ano - ensino médio</option>
+          </select>
+
+          <label for="faltas">Faltas:</label>
+          <input type="text" id="faltas" name="faltas" required />
+
+          <input type="hidden" id="txtId" name="id">
+
+          <button type="button" id="cadastro" onclick="cadastrar()">Cadastrar</button>
+          <button  style="display:none" type="button" id="alterar" onclick="modificar()">Modificar</button>
+<!--          <input type="button" onclick="mostraTabela();" id="mostra-tabela" value="exibir" />-->
+        </form>
+      </section>
+
+      <div>
+        <table id="tabela">
+          <thead>
+            <tr>
+              <th>Aluno</th>
+              <th>Idade</th>
+              <th>Série</th>
+              <th>Faltas</th>
+              <th>Situação</th>
+            </tr>
+          </thead>
+          <tbody id="tbody-alunos">
+
+          </tbody>
+        </table>
+  </div>
+    </main>
+<footer class="footer-contato">
+  <section class="redes-sociais">
+    <h4>Siga-nos nas redes sociais:</h4>
+    <ul class='icones'>
+      <li class='fb'>
+        <i class="fab fa-facebook-square"></i>
+      </li>
+      <li class="in">
+        <i class="fab fa-linkedin"></i>
+      </li>
+      <li class="ig">
+        <i class="fab fa-instagram"></i>
+      </li>
+    </ul>
+  </section>
+
+  <div class="menu-footer">
+    <ul class="menu-simplificado">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="sobre.html">Sobre</a></li>
+      <li><a href="alunos.html">Alunos</a></li>
+    </ul>
+    <ul class="menu-simplificado2">
+      <li><a href="disciplinas.html">Disciplinas</a></li>
+      <li><a href="noticias.html">notícias</a></li>
+      <li><a href="login.html">login</a></li>
+    </ul>
+  </div>
+
+  <p class="copyright">&copy; Copyright Colégio Fiorentin - 2019</p>
+
+</footer>
+<script src="js/jquery-3.4.1.js"></script>
+<script src= "js/crudAluno.js"></script>
+</body>
+</html>

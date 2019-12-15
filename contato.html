@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width">
+    <meta name="author" content="Philippo Rodrigues" />
+    <meta name="keywords" content="Colégio, Fiorentin, High School" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" type="text/css">
+    <title>Contato</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="Modernizr/modernizr-custom.js"></script>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/estilos.css" />
+    <link
+            href="https://fonts.googleapis.com/css?family=Arapey&display=swap"
+            rel="stylesheet"
+    />
+</head>
+
+<body>
+
+<header>
+    <div class="imagem-cabecalho">
+        <img
+                src="imagensIndex/logoColegio.png"
+                alt="Brasão da escola nas cores azul e branco"
+                title="Logomarca escola"
+        />
+    </div>
+    <div>
+        <nav class="menu-outras-paginas">
+            <ul class="primary">
+                <li>
+                    <a href="index.html" title="home">home</a>
+                </li>
+                <li>
+                    <a href="sobre.html" title="sobre">sobre</a>
+                </li>
+                <li>
+                    <a href="">alunos</a>
+                    <ul class="sub">
+                        <li><a href="alunos.html" title="alunos">tabela de alunos</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">disciplinas</a>
+                    <ul class="sub">
+                        <li><a href="#">tabela de disciplinas/professores</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="noticias.html" title="notícias">notícias</a>
+                <li>
+                    <a href="contato.html" title="contato">contato</a>
+                </li>
+                <li class="login">
+                    <a href="login.html">login</a>
+                    <ul class="sub">
+                        <li><a  class="menu-login" href="login.html" title="login">Login</a></li>
+                        <li><a  class="menu-cadastro" href="login.html" title="cadastro">Cadastro</a></li>
+                    </ul>
+                </li>
+                <li class="search">
+                    <form>
+                        <label>
+                            <input type="text" placeholder="Search.." name="search">
+                        </label>
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main>
+<section id="contato-colegio">
+
+    <h2>Contato</h2>
+
+    <form>
+        <div>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" required />
+        </div>
+
+        <div>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" required />
+        </div>
+
+        <div>
+        <label for="individuo">Selecione:</label>
+        <select id="individuo" name="individuo" required>
+            <option value="" data-default disabled selected>Selecione</option>
+            <option value="estudante do 1º ano - ensino médio">Estudante do 1º ano - ensino médio</option>
+            <option value="estudante do 2º ano - ensino médio" >Estudante do 2º ano - ensino médio</option>
+            <option value="estudante do 3º ano - ensino médio">Estudante do 3º ano - ensino médio</option>
+            <option value="filiacao" disabled>Filiação</option>
+            <option value="outros" disabled>Outros</option>
+        </select>
+        </div>
+
+        <div>
+            <label for="comentarios">Comentários:</label>
+            <textarea
+                    name="cometarios"
+                    id="comentarios"
+                    rows="10"
+                    cols="15"
+                    required
+            ></textarea>
+        </div>
+
+        <input type="submit" value="enviar" class="submit" />
+    </form>
+</section>
+</main>
+<footer>
+    <section class="redes-sociais">
+        <h4>Siga-nos nas redes sociais:</h4>
+        <ul class='icones'>
+            <li class='fb'>
+                <i class="fab fa-facebook-square"></i>
+            </li>
+            <li class="in">
+                <i class="fab fa-linkedin"></i>
+            </li>
+            <li class="ig">
+                <i class="fab fa-instagram"></i>
+            </li>
+        </ul>
+    </section>
+
+    <div class="menu-footer">
+        <ul class="menu-simplificado">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="alunos.html">Alunos</a></li>
+        </ul>
+        <ul class="menu-simplificado2">
+            <li><a href="disciplinas.html">Disciplinas</a></li>
+            <li><a href="noticias.html">notícias</a></li>
+            <li><a href="login.html">login</a></li>
+        </ul>
+    </div>
+
+    <p class="copyright">&copy; Copyright Colégio Fiorentin - 2019</p>
+
+</footer>
+</body>
+</html>
