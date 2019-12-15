@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c8db37fe-b4b2-4881-a5c0-f2ba113ea7ce" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alunos.html" beforeDir="false" afterPath="$PROJECT_DIR$/alunos.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +48,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="prettierjs.PrettierConfiguration.Package" value="/usr/local/lib/node_modules/prettier" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -90,7 +91,7 @@
       <workItem from="1576193862020" duration="6432000" />
       <workItem from="1576239533240" duration="13996000" />
       <workItem from="1576336978717" duration="24578000" />
-      <workItem from="1576371708534" duration="3759000" />
+      <workItem from="1576371708534" duration="4233000" />
     </task>
     <task id="LOCAL-00001" summary="Crud Colégio em Javascript">
       <created>1576374398421</created>
@@ -120,7 +121,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576379704211</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Crud Colégio em Javascript">
+      <created>1576380032724</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1576380032724</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,26 +170,26 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="458" y="214" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.877@0.23.1440.877" timestamp="1576365432424" />
-    <state x="199" y="23" key="CommitChangelistDialog2" timestamp="1576379704075">
+    <state x="199" y="23" key="CommitChangelistDialog2" timestamp="1576380032509">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="199" y="23" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1576379704075" />
-    <state x="568" y="362" key="Github.ShareDialog" timestamp="1576379926095">
+    <state x="199" y="23" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1576380032509" />
+    <state x="568" y="362" key="Github.ShareDialog" timestamp="1576380098165">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="568" y="362" key="Github.ShareDialog/0.23.1440.877@0.23.1440.877" timestamp="1576379926095" />
+    <state x="568" y="362" key="Github.ShareDialog/0.23.1440.877@0.23.1440.877" timestamp="1576380098165" />
     <state x="308" y="202" key="IDE.errors.dialog" timestamp="1576152121176">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="308" y="202" key="IDE.errors.dialog/0.23.1440.877@0.23.1440.877" timestamp="1576152121176" />
-    <state x="221" y="110" key="SettingsEditor" timestamp="1576379583547">
+    <state x="221" y="110" key="SettingsEditor" timestamp="1576380037576">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="221" y="110" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1576379583547" />
-    <state x="320" y="196" key="Vcs.Push.Dialog.v2" timestamp="1576379710311">
+    <state x="221" y="110" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1576380037576" />
+    <state x="320" y="196" key="Vcs.Push.Dialog.v2" timestamp="1576380059642">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="320" y="196" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1576379710311" />
+    <state x="320" y="196" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1576380059642" />
     <state x="100" y="123" width="1240" height="677" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1576379583864">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
