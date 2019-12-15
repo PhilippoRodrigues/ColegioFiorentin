@@ -2,14 +2,14 @@
 
 function cadastrar() {
 
-  let form = document.querySelector('#form-aluno');
+
 
   let alunos = localStorage.alunos == null ? [] : JSON.parse(localStorage.alunos);
 
-  let nome = document.querySelector("#aluno").value;
-  let idade = document.querySelector("#idade").value;
-  let serie = document.querySelector("#serie").value;
-  let faltas = document.querySelector("#faltas").value;
+  let nome = $("#aluno").val();
+  let idade = $("#idade").val();
+  let serie = $("#serie").val();
+  let faltas = $("#faltas").val();
 
   alunos.push({
     aluno: nome,
@@ -25,7 +25,7 @@ function cadastrar() {
 
   alert(`Dados do(a) aluno(a) ${nome} adicionados!`);
 
-  form.reset();
+  $("#form-aluno")[0].reset();
 }
 
 function listar() {
@@ -36,10 +36,10 @@ function listar() {
 
     let alunos = localStorage.alunos == null ? [] : JSON.parse(localStorage.alunos);
 
-  let tabela = document.querySelector("#tbody-alunos");
-  tabela.innerHTML = "";
+  let tabela = $("#tbody-alunos");
+  tabela.html("");
   alunos.forEach(dados => {
-    tabela.innerHTML += `
+    tabela.append(`
             <tr>
                 <td>${dados.aluno}</td>
                 <td>${dados.idade}</td>
@@ -51,7 +51,7 @@ function listar() {
                     <button id="botao-apagar" onclick="excluir(${dados.nome})">Excluir</button>
                 </td>  
             </tr>
-        `;
+        `);
   });
 
   });
@@ -61,29 +61,29 @@ function editar(doc) {
 
   let alunos = localStorage.alunos == null ? [] : JSON.parse(localStorage.alunos);
 
-  let nome = document.querySelector("#aluno");
-  let idade = document.querySelector("#idade");
-  let serie = document.querySelector("#serie");
-  let faltas = document.querySelector("#faltas");
-  let id = document.querySelector("#txtId");
+  let nome = $("#aluno");
+  let idade = $("#idade");
+  let serie = $("#serie");
+  let faltas = $("#faltas");
+  let id = $("#txtId");
 
-  let botaoGuardar = document.querySelector("#cadastro");
-  let botaoModificar = document.querySelector("#alterar");
+  let botaoGuardar = $("#cadastro");
+  let botaoModificar = $("#alterar");
 
   let resultado = alunos.find(e => e.nome === doc);
   let resultadoIndex = alunos.findIndex(e => e.nome === doc);
 
   if (resultado !== undefined) {
 
-    botaoGuardar.style.display = "none";
-    botaoModificar.style.display = "block";
+    botaoGuardar.hide();
+    botaoModificar.show();
 
-    nome.value = resultado.aluno;
-    idade.value = resultado.idade;
-    serie.value = resultado.serie;
-    faltas.value = resultado.faltas;
+    nome.val(resultado.aluno);
+    idade.val(resultado.idade);
+    serie.val(resultado.serie);
+    faltas.val(resultado.faltas);
 
-    id.value = resultadoIndex;
+    id.val(resultadoIndex);
 
   } else {
 
@@ -94,16 +94,16 @@ function editar(doc) {
 function modificar() {
 
   let alunos = localStorage.alunos == null ? [] : JSON.parse(localStorage.alunos);
-  let form = document.querySelector('#form-aluno');
+  // let form = $('#form-aluno');
 
-  let nome = document.querySelector("#aluno").value;
-  let idade = document.querySelector("#idade").value;
-  let serie = document.querySelector("#serie").value;
-  let faltas = document.querySelector("#faltas").value;
-  let id = document.querySelector("#txtId").value;
+  let nome = $("#aluno").val();
+  let idade = $("#idade").val();
+  let serie = $("#serie").val();
+  let faltas = $("#faltas").val();
+  let id = $("#txtId").val();
 
-  let botaoGuardar = document.querySelector("#cadastro");
-  let botaoModificar = document.querySelector("#alterar");
+  let botaoGuardar = $("#cadastro");
+  let botaoModificar = $("#alterar");
 
   alunos[id].aluno = nome;
   alunos[id].idade = idade;
@@ -111,8 +111,8 @@ function modificar() {
   alunos[id].faltas = faltas;
   alunos[id].situacao = faltas > 50 ? "Reprovado por faltas" : "Aprovado";
 
-  botaoGuardar.style.display = "block";
-  botaoModificar.style.display = "none";
+  botaoGuardar.show();
+  botaoModificar.hide();
 
   localStorage.alunos = JSON.stringify(alunos);
 
@@ -120,7 +120,7 @@ function modificar() {
 
   alert("Dados alterados!");
 
-  form.reset();
+  $("#form-aluno")[0].reset();
 }
 
 function excluir(doc){
