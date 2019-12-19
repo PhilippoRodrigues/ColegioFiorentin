@@ -74,18 +74,19 @@
   </header>
 
       <section id="form">
-        <form id="form-aluno">
+        <form id="form-aluno" onsubmit="cadastrar(); event.preventDefault();">
+
           <h2>Dados do aluno</h2>
           <p>Página destinada ao cadastro, edição, remoção e exibição dos alunos matriculados no Colégio Fiorentin. </p>
 
           <label for="aluno">Nome:</label>
-          <input type="text" id="aluno" name="nome" required />
+          <input type="text" id="aluno" name="nome" class="valida-form" required="required" pattern="[A-Z a-z]" />
 
           <label for="idade">Idade:</label>
-          <input type="text" id="idade" name="idade" required />
+          <input type="text" required="required" id="idade" class="valida-form" name="numbers" pattern="[0-9]+$" />
 
           <label for="serie">Série:</label>
-          <select id="serie" name="serie" required>
+          <select id="serie" name="serie" class="valida-form" required="required">
             <option value="" data-default disabled selected>Selecione</option>
             <option value="1º ano - ensino médio">1º ano - ensino médio</option>
             <option value="2º ano - ensino médio">2º ano - ensino médio</option>
@@ -93,12 +94,12 @@
           </select>
 
           <label for="faltas">Faltas:</label>
-          <input type="text" id="faltas" name="faltas" required />
+          <input type="number" id="faltas" class="valida-form" name="numbers" required="required" pattern="[0-9]+$" />
 
-          <input type="hidden" id="txtId" name="id">
+          <input type="hidden" id="txtId" class="valida-form" name="id" required="required">
 
-          <button type="button" id="cadastro" onclick="cadastrar()">Cadastrar</button>
-          <button  style="display:none" type="button" id="alterar" onclick="modificar()">Modificar</button>
+          <input type="submit" id="cadastro" value="Cadastrar" />
+          <input  style="display:none" type="button" id="alterar" onclick="modificar();" value="Alterar" />
         </form>
       </section>
 

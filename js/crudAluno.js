@@ -1,38 +1,38 @@
 //CRUD - funções
 
+let botaoAdiciona = $("#cadastro");
+let formAluno = $("#form-aluno");
+let botaoModifica = $("#alterar");
+
 function cadastrar() {
-
-
 
   let alunos = localStorage.alunos == null ? [] : JSON.parse(localStorage.alunos);
 
-  let nome = $("#aluno").val();
-  let idade = $("#idade").val();
-  let serie = $("#serie").val();
-  let faltas = $("#faltas").val();
+    let nome = $("#aluno").val();
+    let idade = $("#idade").val();
+    let serie = $("#serie").val();
+    let faltas = $("#faltas").val();
 
-  alunos.push({
-    aluno: nome,
-    idade: idade,
-    serie: serie,
-    faltas: faltas,
-    situacao: faltas > 50 ? "Reprovado por faltas" : "Aprovado"
-  });
+      alunos.push({
+        aluno: nome,
+        idade: idade,
+        serie: serie,
+        faltas: faltas,
+        situacao: faltas > 50 ? "Reprovado por faltas" : "Aprovado"
+      });
 
-  localStorage.alunos = JSON.stringify(alunos);
+      localStorage.alunos = JSON.stringify(alunos);
 
   listar();
 
   alert(`Dados do(a) aluno(a) ${nome} adicionados!`);
 
-  $("#form-aluno")[0].reset();
+
+  formAluno[0].reset();
 }
 
+
 function listar() {
-
-  document.addEventListener('click', function (e) {
-
-    e.preventDefault();
 
     let alunos = localStorage.alunos == null ? [] : JSON.parse(localStorage.alunos);
 
@@ -48,12 +48,12 @@ function listar() {
                 <td>${dados.situacao}</td>
                 <td>
                     <button id="botao-editar" onclick="editar(${dados.nome})">Editar</button>
+                   <!-- <input type="submit" id="botao-editar" value=""Editar /> -->
                     <button id="botao-apagar" onclick="excluir(${dados.nome})">Excluir</button>
+                   <!-- <input type="submit" id="botao-apagar" value="Excluir" /> -->
                 </td>  
             </tr>
         `);
-  });
-
   });
 }
 
@@ -67,16 +67,13 @@ function editar(doc) {
   let faltas = $("#faltas");
   let id = $("#txtId");
 
-  let botaoGuardar = $("#cadastro");
-  let botaoModificar = $("#alterar");
-
   let resultado = alunos.find(e => e.nome === doc);
   let resultadoIndex = alunos.findIndex(e => e.nome === doc);
 
   if (resultado !== undefined) {
 
-    botaoGuardar.hide();
-    botaoModificar.show();
+    botaoAdiciona.hide();
+    botaoModifica.show();
 
     nome.val(resultado.aluno);
     idade.val(resultado.idade);
@@ -94,25 +91,21 @@ function editar(doc) {
 function modificar() {
 
   let alunos = localStorage.alunos == null ? [] : JSON.parse(localStorage.alunos);
-  // let form = $('#form-aluno');
 
-  let nome = $("#aluno").val();
+  let aluno = $("#aluno").val();
   let idade = $("#idade").val();
   let serie = $("#serie").val();
   let faltas = $("#faltas").val();
   let id = $("#txtId").val();
 
-  let botaoGuardar = $("#cadastro");
-  let botaoModificar = $("#alterar");
-
-  alunos[id].aluno = nome;
+  alunos[id].aluno = aluno;
   alunos[id].idade = idade;
   alunos[id].serie = serie;
   alunos[id].faltas = faltas;
   alunos[id].situacao = faltas > 50 ? "Reprovado por faltas" : "Aprovado";
 
-  botaoGuardar.show();
-  botaoModificar.hide();
+  botaoAdiciona.show();
+  botaoModifica.hide();
 
   localStorage.alunos = JSON.stringify(alunos);
 
@@ -120,7 +113,7 @@ function modificar() {
 
   alert("Dados alterados!");
 
-  $("#form-aluno")[0].reset();
+  formAluno[0].reset();
 }
 
 function excluir(doc){

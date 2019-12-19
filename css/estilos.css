@@ -729,10 +729,6 @@ th {
 
 /*Login*/
 
-/*#cadastro-login {*/
-/*  display: none;*/
-/*}*/
-
 #nome-login, #senha-login, #nome-cadastro, #email-cadastro, #senha-cadastro{
   width: 35%;
   height: 40px;
