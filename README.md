@@ -8,5 +8,5 @@
 <li>CRUD completo de um sistema escolar, na linguagem Javascript (ES6) com a API JQuery.</li>
 <li>Armazenamento dos dados no localstorage.</li>
 <li>Objetos literais, no formato JSON.</li>
-<li>Utilização de HTML5, CSS3 e técnicas de CSS4, na estrutura e estilo do projeto.</li>
+<li>Utilização de HTML5, CSS3 e técnicas de CSS4, na estrutura e no estilo do projeto.</li>
 </ul>
